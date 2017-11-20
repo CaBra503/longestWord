@@ -6,10 +6,17 @@ for loop to itterate through the array of words
 
 
 */
-
 function findLongestWord(str){
-    str.split();
-    return str.length;
+    var longestWord = 0;
+    wordArr = str.split(' ');
+    for (var i =0; i < wordArr.length; i++){
+       if (wordArr[i].length > longestWord){
+        longestWord = wordArr[i].length;
+       }
+    }
+    return longestWord;
 }
+    
 
-findLongestWord('this is the longest string.');
+
+console.log(findLongestWord('this is the longest string.'));
